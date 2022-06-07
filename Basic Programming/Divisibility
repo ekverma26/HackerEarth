@@ -1,0 +1,28 @@
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+
+        Scanner s = new Scanner(System.in);
+        int N = 0;
+        N = s.nextInt();
+        int c=0;
+        
+        int[] data = new int[N];
+        for(int i=0; i<N; i++){
+            data[i] = s.nextInt();
+            c=data[i];
+        }
+
+        if(c%10==0)
+        {
+            System.out.println("Yes");
+        }
+        else
+        {
+            System.out.println("No");
+        }
+
+
+    }
+}
