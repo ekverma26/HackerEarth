@@ -1,0 +1,65 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();                 // Reading input 
+        //System.out.println("Hi, " + name + ".");    // Writing to 
+        for (int i=0;i<t;i++)
+        {
+            int g = s.nextInt(); 
+            int p = s.nextInt();
+            int n = s.nextInt();
+            int c1=0;
+            int c2=0;
+            int total=0;
+            int x=0;
+            int y=0;
+
+            for (int j=0;j<n;j++)
+            {
+                int a = s.nextInt(); 
+                int b = s.nextInt();
+
+                if(a==1 && b==1)
+                {
+                  total = total + g+p;
+                }
+                else if(a==0 && b==1)
+                { c1=c1+1; }
+                else if(a==1 && b==0)
+                { c2=c2+1; }
+                else
+                { continue;}
+            }
+
+            if (g<=p)
+            { x=g;
+              y=p; }
+            else
+            { 
+                x=p;
+                y=g; }
+
+            
+
+            if(c1>=c2)
+            {
+                total = total + (c1*x);
+                total = total + (c2*y);
+            }
+            else
+            {
+                total = total + (c2*x);
+                total = total + (c1*y);
+            }
+
+        System.out.println(total);    
+
+        }
+    }
+}
