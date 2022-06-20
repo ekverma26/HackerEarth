@@ -1,0 +1,28 @@
+a=input()
+b=a.split()
+n=b[0]
+k=int(b[1])
+l=[]
+for i in range(0,len(n)):
+    l.append(int(n[i:i+1]))
+
+c=0
+for i in range(0,k):
+    if(l[i+c]<9):
+        l[i+c]=9
+    else:
+        for j in range(i+c+1,len(l)):
+            if(l[j]<9):
+                l[j]=9
+                c=c+1
+            else:
+                continue
+
+                
+            break
+
+
+s=''
+for i in range(0,len(l)):
+    s=s+str(l[i])
+print(s)
